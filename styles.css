@@ -1,0 +1,139 @@
+/* Base styles for all screen sizes */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.resilience-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    z-index: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) {
+    .content {
+        max-width: 60%;
+    }
+    .content h2 {
+        font-size: 3rem;
+    }
+    .content p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+    .content {
+        max-width: 50%;
+    }
+    .content h2 {
+        font-size: 4rem;
+    }
+    .content p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+    .background-video {
+        /*display: none;
+    }
+    .resilience-section {
+        background-image: url('images/fallback.jpg'); /* Replace with your fallback image */
+        background-size: cover;
+        background-position: center;
+    }
+    .content {
+        padding: 15px;
+    }
+}
+
+
+/* About Me Section */
+.about-me-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.about-me-content {
+    z-index: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.profile-photo {
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #7CB342;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-me-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.about-me-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
