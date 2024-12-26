@@ -41,6 +41,39 @@ video {
     line-height: 1.8; /* Improved spacing for readability */
 }
 
+/* for small screens */
+@media (max-width: 768px) {
+    .text-overlay {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .text-overlay h1,
+    .text-overlay h2 {
+        font-size: 1.8rem; /* Smaller headers for mobile */
+    }
+
+    .text-overlay p {
+        font-size: 1rem; /* Smaller paragraph text */
+        line-height: 1.4; /* Reduce line spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-overlay {
+        padding: 5px; /* Minimal padding for very small screens */
+    }
+
+    .text-overlay h1,
+    .text-overlay h2 {
+        font-size: 1.2rem; /* Even smaller headers for very small screens */
+    }
+
+    .text-overlay p {
+        font-size: 0.8rem; /* Adjust paragraph text size */
+        line-height: 1.2; /* Tighten line spacing */
+    }
+}
+
 
 /* Section Styles */
 .section {
