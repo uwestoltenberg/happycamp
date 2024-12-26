@@ -9,9 +9,15 @@
 <body>
     <!-- First Section -->
     <section class="resilience-section">
-        <video autoplay muted loop playsinline class="background-video" loading="lazy" poster="images/fallback.jpg">
-            <source src="https://happycamp.blob.core.windows.net/videos/resilience_waves4_sec1.webm" type="video/webm">
-            <source src="https://happycamp.blob.core.windows.net/videos/resilience_waves4_sec1.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline class="background-video" loading="lazy">
+            <!-- High-resolution videos for larger screens -->
+            <source src="https://happycamp.blob.core.windows.net/videos/start-page720.webm" type="video/webm" media="(min-width: 768px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/start-page720.mp4" type="video/mp4" media="(min-width: 768px)">
+            
+            <!-- Low-resolution videos for smaller screens -->
+            <source src="https://happycamp.blob.core.windows.net/videos/start-page480.webm" type="video/webm" media="(max-width: 767px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/start-page480.mp4" type="video/mp4" media="(max-width: 767px)">
+            
             Your browser does not support the video tag.
         </video>
         <div class="content">
@@ -21,23 +27,23 @@
     </section>
     <!-- Second Section -->
     <section class="about-me-section">
-        <video autoplay muted loop playsinline class="background-video">
-            <source src="https://happycamp.blob.core.windows.net/videos/about-me-video.mp4" type="video/mp4">
-            <source src="https://happycamp.blob.core.windows.net/videos/about-me-video.webm" type="video/webm">
+        <video autoplay muted loop playsinline class="background-video" loading="lazy">
+            <!-- High-resolution videos for larger screens -->
+            <source src="https://happycamp.blob.core.windows.net/videos/About-Me720.webm" type="video/webm" media="(min-width: 768px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/About-Me720.mp4" type="video/mp4" media="(min-width: 768px)">
+            
+            <!-- Low-resolution videos for smaller screens -->
+            <source src="https://happycamp.blob.core.windows.net/videos/About-Me480.webm" type="video/webm" media="(max-width: 767px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/About-Me480.mp4" type="video/mp4" media="(max-width: 767px)">
+            
             Your browser does not support the video tag.
         </video>
         <div class="about-me-content">
-            <div class="profile-photo">
-                <img src="images/uwe-photo.jpg" alt="Uwe at Happy Camp">
-            </div>
             <h2>Meet Uwe – The Mind Behind Happy Camp</h2>
             <p>
                 My name is Uwe, and I’ve spent decades transforming my life through resilience and health. From overcoming personal challenges like weight loss and burnout to designing a fitness camp for others, I’ve made it my mission to help people unlock their potential and embrace lasting change.
             </p>
-            <p>
-                Happy Camp is not just a retreat—it’s the culmination of my journey, blending mindfulness, fitness, and nutrition in a way that’s both effective and sustainable.
-            </p>
         </div>
     </section>
-    </body>
+</body>
 </html>

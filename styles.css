@@ -5,6 +5,7 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Resilience Section */
 .resilience-section {
     position: relative;
     height: 100vh;
@@ -69,13 +70,13 @@ body, html {
     }
 }
 
-/* Small screens (mobile) */
+/* Small screens (mobile): Resilience Section */
 @media (max-width: 480px) {
-    .background-video {
-        /*display: none;
+    .resilience-section .background-video {
+        display: none;
     }
     .resilience-section {
-        background-image: url('images/fallback.jpg'); /* Replace with your fallback image */
+        background-image: url('https://happycamp.blob.core.windows.net/videos/sec2-fallback.png'); /* Replace with your fallback image */
         background-size: cover;
         background-position: center;
     }
@@ -83,7 +84,6 @@ body, html {
         padding: 15px;
     }
 }
-
 
 /* About Me Section */
 .about-me-section {
@@ -97,34 +97,12 @@ body, html {
     overflow: hidden;
 }
 
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
 .about-me-content {
     z-index: 1;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Adds contrast for text readability */
     border-radius: 10px;
     max-width: 800px;
-}
-
-.profile-photo {
-    margin-bottom: 20px;
-}
-
-.profile-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #7CB342;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-me-content h2 {
@@ -136,4 +114,16 @@ body, html {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+/* Mobile optimization: Replace video with static image for very small screens */
+@media (max-width: 480px) {
+    .about-me-section .background-video {
+        display: none;
+    }
+    .about-me-section {
+        background-image: url('https://happycamp.blob.core.windows.net/videos/sec2-fallback.png');
+        background-size: cover;
+        background-position: center;
+    }
 }
