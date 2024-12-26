@@ -3,73 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Camp - Recreate Your Resilience</title>
+    <title>Happy Camp Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- First Section -->
-    <section class="resilience-section">
-        <video autoplay muted loop playsinline class="background-video" loading="lazy">
-            <!-- High-resolution videos for larger screens -->
-            <source src="https://happycamp.blob.core.windows.net/videos/start-page720.webm" type="video/webm" media="(min-width: 768px)">
-            <source src="https://happycamp.blob.core.windows.net/videos/start-page720.mp4" type="video/mp4" media="(min-width: 768px)">
-            
-            <!-- Low-resolution videos for smaller screens -->
-            <source src="https://happycamp.blob.core.windows.net/videos/start-page480.webm" type="video/webm" media="(max-width: 767px)">
-            <source src="https://happycamp.blob.core.windows.net/videos/start-page480.mp4" type="video/mp4" media="(max-width: 767px)">
-            
+    <!-- Video Section (Section 1) -->
+    <div class="video-section">
+        <video autoplay muted loop playsinline poster="https://happycamp.blob.core.windows.net/videos/sec1-fallback.png">
+            <source src="https://happycamp.blob.core.windows.net/videos/start-page480.mp4" type="video/mp4 media=(max-width: 768px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/start-page720.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="content">
-            <h2>Recreate Your Natural Resilience</h2>
-            <p>Enjoy Happy-Camps in Portugal</p>
+        <div class="text-overlay">
+            <h1>Recreate Your Natural Resilience</h1>
+            <p>Join Happy-Camp in Nazaré/Alcobaça, Portugal<br>Launching August 2027</p>
         </div>
-    </section>
-    <!-- Second Section -->
-    <section class="about-me-section">
-        <video autoplay muted loop playsinline class="background-video" loading="lazy">
-            <!-- High-resolution videos for larger screens -->
-            <source src="https://happycamp.blob.core.windows.net/videos/About-Me720.webm" type="video/webm" media="(min-width: 768px)">
-            <source src="https://happycamp.blob.core.windows.net/videos/About-Me720.mp4" type="video/mp4" media="(min-width: 768px)">
-            
-            <!-- Low-resolution videos for smaller screens -->
-            <source src="https://happycamp.blob.core.windows.net/videos/About-Me480.webm" type="video/webm" media="(max-width: 767px)">
-            <source src="https://happycamp.blob.core.windows.net/videos/About-Me480.mp4" type="video/mp4" media="(max-width: 767px)">
-            
+    </div>
+
+    <!-- About Me Section (Section 2) -->
+    <div class="video-section">
+        <video autoplay muted loop playsinline poster="https://happycamp.blob.core.windows.net/videos/sec2-fallback.png">
+            <source src="https://happycamp.blob.core.windows.net/videos/About-Me480.mp4" type="video/mp4 media=(max-width: 768px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/About-Me720.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="about-me-content">
-            <h2>Meet Uwe – The Mind Behind Happy Camp</h2>
+        <div class="text-overlay">
+            <h2>Why Resilience Matters</h2>
             <p>
-                My name is Uwe, and I’ve spent decades transforming my life through resilience and health. From overcoming personal challenges like weight loss and burnout to designing a fitness camp for others, I’ve made it my mission to help people unlock their potential and embrace lasting change.
+				My name is Uwe, and my life has been shaped by resilience. I survived a near-fatal accident that left me in an artificial coma for several days and overcame multiple burnouts that tested me deeply.
+            </p>
+            <p>
+				I spent 15 years running my own software company and 20 years working for the United Nations. During this time, I worked with people from many cultures around the world, learning from their perspectives and gaining the energy to help others.
+            </p>
+            <p>
+				Now, I am using everything I’ve learned to create the Happy-Camp that will help people rebuild their resilience, achieve their goals, and make lasting changes in their lives.
             </p>
         </div>
-    </section>
-    <!-- Second Section -->
-    <section class="philosophy-section">
-        <video autoplay muted loop playsinline class="background-video">
-            <!-- High-resolution videos for larger screens -->
-            <source src="https://happycamp.blob.core.windows.net/videos/philosopy720.webm" type="video/webm" media="(min-width: 768px)">
-            <source src="https://happycamp.blob.core.windows.net/videos/philosopy720.mp4" type="video/mp4" media="(min-width: 768px)">
-            
-            <!-- Low-resolution videos for smaller screens -->
-            <source src="https://happycamp.blob.core.windows.net/videos/philosopy480.webm" type="video/webm" media="(max-width: 767px)">
-            <source src="https://happycamp.blob.core.windows.net/videos/philosopy480.mp4" type="video/mp4" media="(max-width: 767px)">
-            
+    </div>
+
+    <!-- Philosophy Section (Section 3) -->
+    <div class="video-section">
+        <video autoplay muted loop playsinline poster="https://happycamp.blob.core.windows.net/videos/sec3-fallback.png">
+            <source src="https://happycamp.blob.core.windows.net/videos/philosopy4820.mp4" type="video/mp4 media=(max-width: 768px)">
+            <source src="https://happycamp.blob.core.windows.net/videos/philosopy720.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="philosophy-content">
+        <div class="text-overlay">
             <h2>The Happy-Camp Philosophy</h2>
             <p>
-                We believe resilience is something everyone is born with. Our ancestors relied on strong resilience to survive in a challenging world, and this strength still exists within all of us.
+				I believe resilience is something everyone is born with. Our ancestors relied on strong resilience to survive in a challenging world, and this strength still exists within all of us.
             </p>
             <p>
-                However, modern life has pulled us away from what keeps us resilient. We face stress without the natural outlets of fighting or escaping. Our diets are filled with processed foods and excess carbs, and we don’t move enough because life has become too convenient.
+				However, modern life has pulled us away from what keeps us resilient. We face stress without the natural outlets of fighting or escaping. Our diets are filled with processed foods and excess carbs, and we don’t move enough because life has become too convenient.
             </p>
             <p>
-                This modern lifestyle is breaking down our natural resilience—but we have the power to change it!
+				This modern lifestyle is breaking down our natural resilience—but we have the power to change it!
             </p>
         </div>
-    </section>
+    </div>
+
+    <!-- How It Works Section (Section 4) -->
+    <div class="section how-it-works-section">
+        <h2>How It Works</h2>
+        <p>
+            Happy Camp stands on three key pillars: <strong>Mind</strong>, <strong>Nutrition</strong>, 
+            and <strong>Exercise</strong>. Together, these create a holistic approach to health and well-being. 
+        </p>
+    </div>
+
+    <!-- Mind Section (Section 5) -->
+    <div class="section mind-section">
+        <h2>Mind</h2>
+        <p>
+            At Happy Camp, we focus on mindfulness, stress management, and mental resilience to help you 
+            achieve clarity and balance in your life.
+        </p>
+    </div>
+
+    <!-- Nutrition Section (Section 6) -->
+    <div class="section nutrition-section">
+        <h2>Nutrition</h2>
+        <p>
+            Learn how to fuel your body with balanced meals and sustainable dietary practices 
+            that promote long-term health and energy.
+        </p>
+    </div>
+
+    <!-- Exercise Section (Section 7) -->
+    <div class="section exercise-section">
+        <h2>Exercise</h2>
+        <p>
+            Build strength, stamina, and flexibility through a combination of guided workouts, 
+            nature activities, and functional training.
+        </p>
+    </div>
 </body>
 </html>
