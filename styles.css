@@ -123,7 +123,7 @@ video {
     position: relative;
     height: 100vh; /* Same height as other sections */
     text-align: center;
-    background-image: url('https://happycamp.blob.core.windows.net/videos/final-section-bg.jpg'); /* Background image */
+    background-image: url('https://happycamp.blob.core.windows.net/images/final-section-bg.jpg'); /* Background image */
     background-size: cover;
     background-position: top;
     color: white;
