@@ -23,14 +23,12 @@ jobs:
           submodules: true
           lfs: false
 
+      # Use the official OIDC token action instead of github-script to retrieve an ID token.
       - name: Get Id Token
-        uses: actions/github-script@v6
         id: idtoken
+        uses: actions/oidc-token@v1
         with:
-          script: |
-            // Return the ID token without duplicate variable declarations.
-            return await require('@actions/core').getIDToken();
-          result-encoding: string
+          audience: azure://AzureStaticWebApps
 
       - name: Build And Deploy
         id: builddeploy
@@ -43,7 +41,7 @@ jobs:
           api_location: ""       # (Optional) API source code path if applicable
           output_location: "."   # Directory where built app content is located
           skip_app_build: true   # Skip the build step if no build command is defined in package.json
-          github_id_token: ${{ steps.idtoken.outputs.result }}
+          github_id_token: ${{ steps.idtoken.outputs.token }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
