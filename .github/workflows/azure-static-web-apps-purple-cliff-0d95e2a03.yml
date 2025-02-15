@@ -15,25 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
 
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
-
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
         with:
-           script: |
-             const core = require('@actions/core')
-             return await core.getIDToken()
-           result-encoding: string
+          script: |
+            // Return the ID token without duplicate variable declarations.
+            return await require('@actions/core').getIDToken();
+          result-encoding: string
 
       - name: Build And Deploy
         id: builddeploy
@@ -45,7 +42,7 @@ jobs:
           app_location: "/"      # Path to your application source code
           api_location: ""       # (Optional) API source code path if applicable
           output_location: "."   # Directory where built app content is located
-          skip_app_build: true   # Skip the build step since no build command is defined in package.json
+          skip_app_build: true   # Skip the build step if no build command is defined in package.json
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
   close_pull_request_job:
